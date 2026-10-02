@@ -1,0 +1,38 @@
+{
+  "name": "japan-industry-energy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "日本は何のエネルギーに頼ってきたか — 総合エネルギー統計から供給・消費・部門・電源の構成変化を探索するダッシュボード",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "fetch": "bash scripts/fetch-xlsx.sh",
+    "data": "bash scripts/build.sh",
+    "verify": "node scripts/verify.ts",
+    "dev": "vite --host 127.0.0.1 --port 5311 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.app.json"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-shape": "^3.2.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.2",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
